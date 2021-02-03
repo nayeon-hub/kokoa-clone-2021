@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>variable&color</title>
+    <style>
+      :root {
+        --main-color: #fcce00;
+        /* 변수 규칙은 --, - 빈공간이 있다면 dash(-)로 채워줘야 함 */
+        /* css customer property */
+
+        --default-border: 1px solid var(--main-color);
+      }
+      body {
+        height: 1000vh;
+        margin: 50px;
+      }
+      p {
+        background-color: var(--main-color);
+        color: rgb(0, 0, 0, 0.5);
+        /* rgb - R,G,B,투명도 opacity
+        #16진수 색상 - #ffffff(white) #000000(black) */
+      }
+      a {
+        color: var(--main-color);
+        border: var(--default-border);
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium
+      dolorum suscipit nisi laudantium voluptate nulla, voluptatum error optio
+      ea fugit!
+    </p>
+    <div>
+      <a href="#">website</a>
+    </div>
+  </body>
+</html>

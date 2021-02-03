@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>state</title>
+    <style>
+      button:active {
+        background-color: tomato;
+      }
+      /* active - 클릭하는 순간에 변화 
+      hover - 마우스를 올려놓을 때
+      focus는 클릭하면 유지됨
+      visited는 방문하면 그 이후에 색깔 바뀜*/
+      /* input:focus {
+        background-color: tomato;
+      } */
+      a:visited {
+        color: tomato;
+      }
+      a:hover {
+        color: teal;
+      }
+      a:focus {
+        color: turquoise;
+      }
+      form {
+        border: 1px solid salmon;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+      }
+      form:hover input:focus {
+        background-color: sienna;
+      }
+      form:focus-within {
+        border-color: seagreen;
+      } /* focus-within은 focused인 자식을 가진 부모 엘리먼트에 적용됨 
+      자식이 focus되면 부모에게 작동함*/
+    </style>
+  </head>
+  <body>
+    <div>
+      <!-- <button>Hello</button> -->
+      <!-- <input type="text" />
+      <input type="text" /> -->
+      <!-- <a href="https://apple.com">Go to apple</a> -->
+      <form action="">
+        <input type="text" name="" id="" />
+        <input type="text" name="" id="" />
+        <input type="text" name="" id="" />
+      </form>
+    </div>
+  </body>
+</html>

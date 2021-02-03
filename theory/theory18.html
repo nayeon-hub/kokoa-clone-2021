@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <title>Transition</title>
+    <style>
+      a {
+        color: wheat;
+        background-color: tomato;
+        text-decoration: none;
+        padding: 3px 5px;
+        border-radius: 5px;
+        font-size: 55px;
+        transition: color 1s cubic-bezier(0.6, 0, 0.735, 0.045),
+          border-radius 5s ease-in-out, background-color 10s ease-out;
+        /* transition: all 1s cubic-bezier(0.215, 0.61, 0.355, 1); */
+        /* transition: background-color 10s ease-in-out, color 5s ease-in-out; */
+        /* transition과 같은 애니메이션을 쓰려면 state가 없는 곳에서 사용해줘야함
+        또한 효과를 주려면 효과를 주려는 부분을 꼭 state부분에 넣어줄 것 
+        참고사이트 :  https://matthewlein.com/tools/ceaser*/
+      }
+      a:hover {
+        border-radius: 20px;
+        color: tomato;
+        background-color: wheat;
+        /* active,focus도 모두 작동함 */
+      }
+      body {
+        transition: background-color 5s ease-out;
+      }
+      body:focus-within {
+        background-color: teal;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="#">Go home</a>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>pseudo selector</title>
+  </head>
+  <style>
+    body {
+      height: 1000vh;
+      margin: 50px;
+    }
+    span {
+      background-color: yellowgreen;
+      padding: 5px;
+      border-radius: 10px;
+    }
+    p span {
+      color: white;
+    }
+    /* div > span {
+      text-decoration: underline;
+    } */
+    p ~ span {
+      text-decoration: underline;
+    }
+    /* 부모 자식 부모 안에 자식을 가리킴
+    부모 > 자식은 direct자식을 가리킴
+    p + span은 p바로 다음으로 오는 span을 가리킴 no inside
+    p ~ span은 p 다음으로 오지만 바로다음이 아닌 그다음에 있을 때*/
+  </style>
+  <body>
+    <div>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
+        blanditiis, laborum nesciunt neque debitis ipsam!<span>inside</span>
+      </p>
+      <address>hi</address>
+      <span>hello</span>
+    </div>
+  </body>
+</html>

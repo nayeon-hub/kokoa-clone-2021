@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>pseudo selector</title>
+  </head>
+  <style>
+    body {
+      height: 1000vh;
+      margin: 50px;
+    }
+    span {
+      background-color: yellowgreen;
+      padding: 5px;
+      border-radius: 10px;
+    }
+    input {
+      border: 1px solid wheat;
+    }
+    input:required {
+      border-color: tomato;
+    }
+    input[type="password"] {
+      background-color: coral;
+    }
+    input[placeholder="username"] {
+      background-color: thistle;
+    }
+    input[placeholder~="name"] {
+      background-color: pink;
+    }
+    /* attribute selector : ~은 포함하고 있다라는 의미로 */
+    /* input:optional {
+      border: 1px solid wheat;
+    } */
+  </style>
+  <body>
+    <form>
+      <input type="text" placeholder="First name" />
+      <input type="text" placeholder="Last name" />
+      <input type="text" placeholder="username" />
+      <input type="password" required placeholder="password" />
+    </form>
+  </body>
+</html>

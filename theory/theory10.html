@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Display</title>
+    <style>
+      body {
+        height: 100vh;
+        /* 100vh - viewport height = screen height
+        100 screen hight = 높이 100%*/
+        margin: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: row-reverse;
+        /* justify-content는 main axis에 적용됨 주축위에서 움직임 default 값은 수평 row
+        align-items는 cross axis에 적용됨 교차축에서 움직임 default 값은 수평 column*/
+        /* flex가 된 순간 body 부모요소에서 div 자식요소를 control할 수 있음  */
+      }
+      div {
+        /* inline-block은 반응형 웹 디자인을 지원하지 않는다. */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 28px;
+        color: white;
+        width: 150px;
+        height: 150px;
+        background-color: teal;
+      }
+      /* flex박스의 경우 스타일을 부모에게만 명시하면 됨, 자식에게 명시할 필요 없음 */
+      #second {
+        background-color: wheat;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="second">1</div>
+    <div>2</div>
+    <div>3</div>
+  </body>
+</html>
